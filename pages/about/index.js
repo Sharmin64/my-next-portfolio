@@ -1,11 +1,11 @@
 // icons
 import {
-  FaHtml5,
   FaCss3,
   FaJs,
   FaReact,
   FaWordpress,
   FaFigma,
+  FaHtml5,
 } from "react-icons/fa";
 
 import {

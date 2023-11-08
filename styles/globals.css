@@ -20,7 +20,7 @@
 
 @layer base {
   body {
-    @apply bg-secondary overflow-hidden leading-relaxed;
+    @apply bg-yellow-300 overflow-hidden leading-relaxed;
   }
 
   .page {
