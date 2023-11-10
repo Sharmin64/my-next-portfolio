@@ -1,5 +1,5 @@
 const Work = () => {
-  return <div>Work</div>;
+  return <div>Work is my identity</div>;
 };
 
 export default Work;

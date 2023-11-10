@@ -88,7 +88,7 @@ const aboutData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  return <div>About will inform you to WoRK</div>;
 };
 
 export default About;
