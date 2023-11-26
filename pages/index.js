@@ -20,7 +20,7 @@ const Home = () => {
         <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title  */}
           <h1 className="h1">
-            Transforming Ideas <br /> Into{" "}
+            Transforming Ideas <br /> Into
             <span className="text-accent">Digital Reality</span>
           </h1>
           {/* subtitle */}
@@ -29,6 +29,10 @@ const Home = () => {
             eius optio labore animi asperiores itaque libero veritatis sapiente
             saepe sed.
           </p>
+          {/* btn */}
+          <div className="flex justify-center xl:hidden relative">
+            <ProjectsBtn />
+          </div>
         </div>
       </div>
 

@@ -47,5 +47,6 @@
       "bold": false,
       "italic": false
     }
-  ]
+  ],
+  "editor.fontSize": 12
 }
