@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // icons
 import {
   FaCss3,
@@ -15,8 +17,8 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
-//  data
-const aboutData = [
+// about  data
+export const aboutData = [
   {
     title: "skills",
     info: [
@@ -91,8 +93,24 @@ const aboutData = [
   },
 ];
 
+// components
+import Avatar from "../../components/Avatar";
+import Circles from "../../components/Circles";
+// framer motion
+import { fadeIn } from "../../variants";
+import { motion } from "framer-motion";
+
 const About = () => {
-  return <div>About will inform you to WoRK</div>;
+  const [index, setIndex] = useState(0);
+  return (
+    <div>
+      <Circles />
+      {/* avatar image  */}
+      <motion.div className="hidden xl:flex absolute bottom-0 -left-[370px]">
+        <Avatar />
+      </motion.div>
+    </div>
+  );
 };
 
 export default About;
