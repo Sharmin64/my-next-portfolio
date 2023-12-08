@@ -1,20 +1,14 @@
 import { useState } from "react";
 
 // icons
-import {
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-  FaHtml5,
-} from "react-icons/fa";
+import { FaCss3, FaJs, FaReact, FaFigma, FaHtml5 } from "react-icons/fa";
 
 import {
   SiNextdotjs,
-  SiFramer,
   SiAdobexd,
   SiAdobephotoshop,
+  SiRedux,
+  SiMongodb,
 } from "react-icons/si";
 
 // about  data
@@ -30,8 +24,8 @@ export const aboutData = [
           <FaJs key={3} />,
           <FaReact key={4} />,
           <SiNextdotjs key={5} />,
-          <SiFramer key={6} />,
-          <FaWordpress key={7} />,
+          <SiRedux key={6} />,
+          <SiMongodb key={7} />,
         ],
       },
       {
@@ -45,7 +39,7 @@ export const aboutData = [
     ],
   },
   {
-    title: "awards",
+    title: "projects",
     info: [
       {
         title: "Webby Awards - Honoree",
@@ -58,7 +52,7 @@ export const aboutData = [
     ],
   },
   {
-    title: "experience",
+    title: "soft-skills",
     info: [
       {
         title: "UX/UI Designer - XYZ Company",
@@ -102,13 +96,78 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  console.log(index);
   return (
-    <div>
+    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
       {/* avatar image  */}
-      <motion.div className="hidden xl:flex absolute bottom-0 -left-[370px]">
+      <motion.div
+        variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        animate="show"
+        exit={"hidden"}
+        className="hidden xl:flex absolute bottom-0 -left-[370px]"
+      >
         <Avatar />
       </motion.div>
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+        {/* text  */}
+        <div className="flex-1 flex flex-col justify-center">
+          <h2 className="h2">
+            Captivating <span>stories</span> birth magnificent designs.
+          </h2>
+          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vel
+            eligendi atque in, magni sit laboriosam, iusto corrupti non quae
+            cumque ea reiciendis, voluptatum pariatur laborum consectetur
+            voluptate officiis voluptatibus.
+          </p>
+        </div>
+        {/* info */}
+        <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+            {aboutData.map((item, itemIndex) => {
+              return (
+                <div
+                  key={itemIndex}
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  onClick={() => setIndex(itemIndex)}
+                >
+                  {item.title}
+                </div>
+              );
+            })}
+          </div>
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item, itemIndex) => {
+              return (
+                <div
+                  key={itemIndex}
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  {/* title */}
+                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className="hidden md:flex">-</div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icon */}
+                    {item.icons?.map((icon, itemIndex) => {
+                      return (
+                        <div className="text-2xl text-white" key={itemIndex}>
+                          {icon}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
