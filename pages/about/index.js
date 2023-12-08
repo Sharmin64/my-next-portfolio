@@ -114,7 +114,8 @@ const About = () => {
         {/* text  */}
         <div className="flex-1 flex flex-col justify-center">
           <h2 className="h2">
-            Captivating <span>stories</span> birth magnificent designs.
+            Captivating <span className="text-accent">stories</span> birth
+            magnificent designs.
           </h2>
           <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime vel
@@ -122,6 +123,8 @@ const About = () => {
             cumque ea reiciendis, voluptatum pariatur laborum consectetur
             voluptate officiis voluptatibus.
           </p>
+          {/* counters */}
+          <div>counters</div>
         </div>
         {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">

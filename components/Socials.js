@@ -7,6 +7,7 @@ import {
   RiDiscordLine,
   RiLinkedinLine,
   RiPinterestLine,
+  RiGithubLine,
 } from "react-icons/ri";
 
 const Socials = () => {
@@ -17,7 +18,9 @@ const Socials = () => {
       </Link>
       <Link
         target="_blank"
-        href={"https://instagram.com/sharmin.liza.5245hibnrrt?igshid=OGQ5ZDc2ODk2ZA=="}
+        href={
+          "https://instagram.com/sharmin.liza.5245hibnrrt?igshid=OGQ5ZDc2ODk2ZA=="
+        }
         className="hover:text-accent transition-all duration-300"
       >
         <RiInstagramLine />
@@ -38,11 +41,18 @@ const Socials = () => {
       >
         <RiDiscordLine />
       </Link>
-      <Link target="_blank" href={"https://www.linkedin.com/in/sarmin-sultana-mern"} className="hover:text-accent transition-all duration-300">
+      <Link
+        target="_blank"
+        href={"https://www.linkedin.com/in/sarmin-sultana-mern"}
+        className="hover:text-accent transition-all duration-300"
+      >
         <RiLinkedinLine />
       </Link>
-      <Link href={""} className="hover:text-accent transition-all duration-300">
-        <RiPinterestLine />
+      <Link
+        href={"https://github.com/Sharmin64"}
+        className="hover:text-accent transition-all duration-300"
+      >
+        <RiGithubLine />
       </Link>
     </div>
   );
