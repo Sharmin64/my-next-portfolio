@@ -94,6 +94,9 @@ import Circles from "../../components/Circles";
 import { fadeIn } from "../../variants";
 import { motion } from "framer-motion";
 
+// counter
+import CountUp from "react-countup";
+
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
@@ -124,7 +127,28 @@ const About = () => {
             voluptate officiis voluptatibus.
           </p>
           {/* counters */}
-          <div>counters</div>
+          <div>
+            <div>
+              {/* experience */}
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={10} duration={5} /> Months.
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Years of experience
+                </div>
+              </div>
+              {/* projects */}
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={5} duration={5} /> Projects
+                </div>
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                  Projects
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         {/* info */}
         <div className="flex flex-col w-full xl:max-w-[48%] h-[480px]">
