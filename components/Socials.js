@@ -6,7 +6,6 @@ import {
   RiFacebookLine,
   RiDiscordLine,
   RiLinkedinLine,
-  RiPinterestLine,
   RiGithubLine,
 } from "react-icons/ri";
 
