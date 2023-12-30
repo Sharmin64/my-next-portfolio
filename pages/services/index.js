@@ -23,8 +23,10 @@ const Services = () => {
               Voluptatibus atque illum sunt culpa facilis inventore.
             </p>
           </div>
-          {/* slider */}
-          <ServiceSlider />
+          <div className="w-full xl:max-w-[65%]">
+            {/* slider */}
+            <ServiceSlider />
+          </div>
         </div>
       </div>
       <Bulb />
