@@ -29,10 +29,16 @@ const Services = () => {
               Voluptatibus atque illum sunt culpa facilis inventore.
             </p>
           </div>
-          <div className="w-full xl:max-w-[65%]">
-            {/* slider */}
+          {/* slider */}
+          <motion.div
+            variants={fadeIn("down", 0.6)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full xl:max-w-[65%]"
+          >
             <ServiceSlider />
-          </div>
+          </motion.div>
         </div>
       </div>
       <Bulb />
