@@ -1,11 +1,14 @@
 import React from "react";
-const workSlides = {
+export const workSlides = {
   slides: [
     {
       images: [
         {
           title: "title",
           path: "/thumb1.jpg",
+          liveLink: "https://assignment-12-summer-camp.web.app",
+          clientCode: "https://github.com/Sharmin64/yoga-camp-client",
+          serverCode: "https://github.com/Sharmin64/yoga-camp-server",
         },
         {
           title: "title",
@@ -79,7 +82,7 @@ const WorkSlider = () => {
                     className="relative rounded-lg overflow-hidden flex items-center justify-center group"
                     key={index}
                   >
-                    <div className="flex items-center justify-center relative overflow-hidden">
+                    <div className="flex items-center justify-center relative overflow-hidden group">
                       {/* images */}
                       <Image
                         src={image.path}
@@ -89,12 +92,18 @@ const WorkSlider = () => {
                       />
                       <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                       {/* title */}
-                      <div>
-                        <div>
+                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 divide-blue-900">
+                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                           {/* title part 1 */}
-                          <div>title part one</div>
-                          {/* title part 1 */}
-                          <div>title part one</div>
+                          <div className="delay-100">LIVE</div>
+                          {/* title part 2 */}
+                          <div className="translate-y-[500%] group-hover:translate-y-0 translate-all duration-300 delay-150">
+                            PROJECT
+                          </div>
+                          {/* icon */}
+                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                            <BsArrowBarRight />
+                          </div>
                         </div>
                       </div>
                     </div>
